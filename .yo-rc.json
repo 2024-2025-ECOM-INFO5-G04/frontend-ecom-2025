@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "baseName": "MesMeilleursMenusFront",
+    "clientFramework": "vue",
+    "clientTestFrameworks": ["cypress"],
+    "clientTheme": "none",
+    "creationTimestamp": 1728391533987,
+    "cypressAudit": true,
+    "cypressCoverage": null,
+    "devServerPort": 9060,
+    "enableTranslation": true,
+    "entities": [],
+    "jhipsterVersion": "8.7.1",
+    "languages": ["fr", "en"],
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "fr",
+    "skipServer": true,
+    "testFrameworks": ["cypress"],
+    "withAdminUi": true
+  }
+}

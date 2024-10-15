@@ -1,4 +1,4 @@
-FROM localhost:5000/frontend:1.0 as vue-app
+FROM emingdgn/g04-frontend:latest as vue-app
 
 FROM nginx:1.27.2-alpine
 COPY --from=vue-app /app/target/classes/static /usr/share/nginx/html

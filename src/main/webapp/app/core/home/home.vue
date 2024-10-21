@@ -1,4 +1,100 @@
 <template>
+  <div class="background-wrapper">
+    <div class="overlay">
+      <h1>Mes Meilleurs Menus</h1>
+      <p>m'aident à Mieux Manger pour ma santé et le climat.</p>
+      <p>
+        Je reçois chaque semaine mon programme de savoureux menus méditerranéens, équilibrés et durables, avec des recettes détaillées et la
+        liste de courses qui va bien.
+      </p>
+      <b-button class="cta-button" @click="openLogin()">login</b-button>
+    </div>
+  </div>
+  <div class="header-buttons">
+    <b-button> Je m'inscrit gratuitement</b-button>
+    <b-button>Je fais un don</b-button>
+    <b-button @click="openLogin()">Je me connect</b-button>
+  </div>
+</template>
+
+<script lang="ts" src="./home.component.ts"></script>
+<style scoped>
+.overlay {
+  background-color: rgba(0, 76, 64, 0.83); /* Adjust the opacity and color as needed */
+
+  color: #fff;
+  width: 520px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block; /* Aligns items to the start (left) */
+  text-align: center;
+}
+.background-wrapper {
+  background-image: url('/content/images/mmmSpecific/repas-dehors.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .overlay {
+    width: 100%;
+    max-width: 530px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background-wrapper {
+    height: 30vh;
+  }
+}
+
+.cta-button {
+  background: var(--mmm-accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+.cta-button:hover {
+  background: var(--mmm-primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+.header-buttons {
+  display: flex; /* Use flexbox for proper alignment */
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.header-buttons button {
+  background-color: var(--mmm-primary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  white-space: nowrap; /* Prevent text wrapping */
+  cursor: pointer;
+  border: none;
+}
+.header-buttons button:hover {
+  background-color: var(--mmm-accent-color);
+}
+</style>
+
+<!-- code block supprimé:
   <div class="home row">
     <div class="col-md-3">
       <span class="hipster img-fluid rounded"></span>
@@ -62,6 +158,4 @@
       </p>
     </div>
   </div>
-</template>
-
-<script lang="ts" src="./home.component.ts"></script>
+   -->

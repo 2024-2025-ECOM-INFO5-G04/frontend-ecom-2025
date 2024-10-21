@@ -5,6 +5,7 @@ import type LoginService from '@/account/login.service';
 import type AccountService from '@/account/account.service';
 import languages from '@/shared/config/languages';
 import EntitiesMenu from '@/entities/entities-menu.vue';
+import '/content/css/mmmSpecific.css';
 
 import { useStore } from '@/store';
 

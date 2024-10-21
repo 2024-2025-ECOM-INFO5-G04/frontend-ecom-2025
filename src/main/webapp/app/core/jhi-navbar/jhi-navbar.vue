@@ -1,29 +1,25 @@
 <template>
-  <b-navbar data-cy="navbar" toggleable="md" type="dark" class="jh-navbar">
-    <b-navbar-brand class="logo" b-link to="/">
-      <span class="logo-img"></span>
-      <span v-text="t$('global.title')" class="navbar-title"></span> <span class="navbar-version">{{ version }}</span>
-    </b-navbar-brand>
-    <b-navbar-toggle
-      right
-      class="jh-navbar-toggler d-lg-none"
-      href="javascript:void(0);"
-      data-toggle="collapse"
-      target="header-tabs"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <font-awesome-icon icon="bars" />
-    </b-navbar-toggle>
+  <b-navbar data-cy="navbar" toggleable="md" type="light" class="jh-navbar">
+    <div class="container">
+      <b-navbar-brand class="logo" b-link to="/">
+        <span class="logo-img"></span>
+      </b-navbar-brand>
+
+      <b-navbar-toggle
+        right
+        class="jh-navbar-toggler d-lg-none"
+        href="javascript:void(0);"
+        data-toggle="collapse"
+        target="header-tabs"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <font-awesome-icon icon="bars" />
+      </b-navbar-toggle>
+    </div>
 
     <b-collapse is-nav id="header-tabs">
       <b-navbar-nav class="ml-auto">
-        <b-nav-item to="/" exact>
-          <span>
-            <font-awesome-icon icon="home" />
-            <span v-text="t$('global.menu.home')"></span>
-          </span>
-        </b-nav-item>
         <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
           <template #button-content>
             <span class="navbar-dropdown-menu">
@@ -142,8 +138,24 @@
 }
 
 .jh-navbar {
-  background-color: #353d47;
-  padding: 0.2em 1em;
+  display: flex;
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  margin: 0 0;
+  padding: 0 0;
+  width: 100%;
+  justify-content: center;
+}
+.ml-auto {
+  margin-left: auto;
+  width: 100%;
+  display: flex;
 }
 
 .jh-navbar .profile-image {
@@ -177,49 +189,48 @@
 }
 
 .jh-navbar .jh-navbar-toggler {
-  color: #ccc;
+  color: var(--mmm-primary-color);
   font-size: 1.5em;
   padding: 10px;
+  border: none;
 }
 
 .jh-navbar .jh-navbar-toggler:hover {
-  color: #fff;
+  color: var(--mmm-accent-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .jh-navbar-toggler {
     display: none;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1150px) {
+@media screen and (min-width: 1120px) and (max-width: 1250px) {
   span span {
     display: none;
   }
-}
-
-.navbar-title {
-  display: inline-block;
-  color: white;
 }
 
 /* ==========================================================================
     Logo styles
     ========================================================================== */
 .navbar-brand.logo {
-  padding: 0 7px;
+  padding: 0 0;
 }
 
 .logo .logo-img {
-  height: 45px;
-  display: inline-block;
+  padding: 0 0;
+  height: 80px;
+  display: flex;
+  position: relative;
+  left: 0;
   vertical-align: middle;
-  width: 45px;
+  width: 200px;
 }
 
 .logo-img {
   height: 100%;
-  background: url('/content/images/logo-jhipster.png') no-repeat center center;
+  background: url('/content/images/mmmSpecific/logo.png') no-repeat center center;
   background-size: contain;
   width: 100%;
   filter: drop-shadow(0 0 0.05rem white);

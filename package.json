@@ -66,6 +66,7 @@
     "bootstrap-vue": "2.23.1",
     "dayjs": "1.11.13",
     "deepmerge": "4.3.1",
+    "mes-meilleurs-menus-front": "file:",
     "pinia": "2.2.2",
     "vue": "3.5.6",
     "vue-i18n": "10.0.1",

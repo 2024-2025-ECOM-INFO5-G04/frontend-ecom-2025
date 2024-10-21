@@ -8,10 +8,10 @@
       <div class="card jh-card">
         <router-view></router-view>
       </div>
-      <b-modal id="login-page" hide-footer lazy>
-        <template #modal-title>
+      <b-modal id="login-page" hide-footer centered hide-header lazy>
+        <!-- <template #modal-title>
           <span data-cy="loginTitle" id="login-title" v-text="t$('login.title')"></span>
-        </template>
+        </template> -->
         <login-form></login-form>
       </b-modal>
 

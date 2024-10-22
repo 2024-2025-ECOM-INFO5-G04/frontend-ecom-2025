@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { type AccountStore } from '@/store';
+import router from '@/router';
 
 export default class AccountService {
   constructor(private store: AccountStore) {}
@@ -32,6 +33,7 @@ export default class AccountService {
       if (response.status === 200 && response.data?.login) {
         const account = response.data;
         this.store.setAuthentication(account);
+        router.push({ name: 'User' });
         return true;
       }
     } catch (error) {

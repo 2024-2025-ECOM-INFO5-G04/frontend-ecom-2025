@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <div class="row">
-      <div class="col-md-3">
-        <span class="hipster img-fluid rounded"></span>
+  <div class="d-flex align-items-center" style="height: 100%">
+    <div class="container text-center">
+      <img :src="'/content/images/salades.webp'" alt="Error Icon" style="height: 25vh" />
+      <div v-if="errorMessage">
+        <div class="alert alert-danger">{{ errorMessage }}</div>
       </div>
-      <div class="col-md-9">
-        <h1 v-text="t$('error.title')"></h1>
+      <div v-if="error403" class="alert alert-danger font-weight-bold" v-text="t$('error.http.403')"></div>
+      <div v-if="error404" class="text-align font-weight-bold" v-text="t$('error.http.404')"></div>
 
-        <div v-if="errorMessage">
-          <div class="alert alert-danger">{{ errorMessage }}</div>
-        </div>
-        <div v-if="error403" class="alert alert-danger" v-text="t$('error.http.403')"></div>
-        <div v-if="error404" class="alert alert-warning" v-text="t$('error.http.404')"></div>
+      <div class="mt-3">
+        <button @click="$router.push('/')" class="btn btn-primary" v-text="t$('error.back')"></button>
       </div>
     </div>
   </div>

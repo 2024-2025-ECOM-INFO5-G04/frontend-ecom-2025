@@ -1,0 +1,21 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.jh-card {
+  flex-grow: 1;
+  display: flex;
+}

@@ -7,13 +7,8 @@
         Je reçois chaque semaine mon programme de savoureux menus méditerranéens, équilibrés et durables, avec des recettes détaillées et la
         liste de courses qui va bien.
       </p>
-      <b-button class="cta-button" @click="openLogin()">login</b-button>
+      <b-button class="cta-button" @click="openLogin()">Log In</b-button>
     </div>
-  </div>
-  <div class="header-buttons">
-    <b-button> Je m'inscrit gratuitement</b-button>
-    <b-button>Je fais un don</b-button>
-    <b-button @click="openLogin()">Je me connect</b-button>
   </div>
 </template>
 
@@ -58,8 +53,9 @@
 .cta-button {
   background: var(--mmm-accent-color);
   color: white;
+  width: 100%;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
   border: none;
@@ -68,29 +64,6 @@
   background: var(--mmm-primary-color);
   color: white;
   text-decoration: none;
-}
-
-.header-buttons {
-  display: flex; /* Use flexbox for proper alignment */
-  flex-direction: column;
-  margin-top: 10px;
-  text-align: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.header-buttons button {
-  background-color: var(--mmm-primary-color);
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 10px;
-  white-space: nowrap; /* Prevent text wrapping */
-  cursor: pointer;
-  border: none;
-}
-.header-buttons button:hover {
-  background-color: var(--mmm-accent-color);
 }
 </style>
 

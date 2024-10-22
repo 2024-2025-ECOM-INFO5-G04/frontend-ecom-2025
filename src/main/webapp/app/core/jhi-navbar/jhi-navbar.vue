@@ -20,6 +20,10 @@
 
     <b-collapse is-nav id="header-tabs">
       <b-navbar-nav class="ml-auto">
+        <b-button class="header-button"> Je m'inscrit gratuitement</b-button>
+        <b-button class="header-button">Je fais un don</b-button>
+        <b-button class="header-button" @click="openLogin()">Je me connect</b-button>
+
         <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
           <template #button-content>
             <span class="navbar-dropdown-menu">
@@ -142,6 +146,12 @@
   justify-content: space-between; /* Space between logo and buttons */
   align-items: center;
   flex-direction: column;
+  width: 100%;
+}
+
+#header-tabs {
+  padding: 0 0;
+  width: 100%;
 }
 
 .container {
@@ -235,5 +245,20 @@
   width: 100%;
   filter: drop-shadow(0 0 0.05rem white);
   margin: 0 5px;
+}
+
+.header-button {
+  margin: 0px 0px 10px 0px;
+  background-color: var(--mmm-primary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  white-space: nowrap; /* Prevent text wrapping */
+  cursor: pointer;
+  border: none;
+}
+.header-buttons button:hover {
+  background-color: var(--mmm-accent-color);
 }
 </style>
